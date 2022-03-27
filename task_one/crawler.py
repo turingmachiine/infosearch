@@ -42,7 +42,7 @@ def save(urls):
     with open(OUTPUT_PATH, WRITE_MODE) as output_file:
         file_number = 1
         for url in urls:
-            name = OUTPUT_DIR + str(file_number) + '.html'
+            name = '{}{}.html'.format(OUTPUT_DIR,str(file_number))
             try:
                 urllib_request.urlretrieve(url, name)
                 result_string = '{}) {}\n'.format(file_number, url.replace("\n", "") )
