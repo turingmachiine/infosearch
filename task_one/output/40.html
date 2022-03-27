@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <meta name="google-site-verification" content="p1mRcLRbpSzluuADXEEqbCUDPiVj5-YoTg14aQsS0BU" />
+    
+
+    <title>ColdHardFootballFacts : Home</title>
+
+        <link rel="icon" type="image/png" href="/img/favicon.ico" />
+
+    <link href="/css/bundle.min.css?v=HY0_bGBZmnsGKheOeFRo2F4Sx54yyntLiwskvl2qZ0g" rel="stylesheet" />
+    <link href="/lib/bootswatch/readable/bootstrap.min.css?v=H6BSUoqH-4MA9Cih6SltDNRgKnRjnn98AVglfEZrfQw" rel="stylesheet" />
+    
+    
+        <link href="/css/site.min.css?v=zrsKo8Jo-IA2X_cUuM6B7lJ8AbwG_0eeNec_Z5EEeuc" rel="stylesheet" />
+        <link href="/chff/css/site.min.css" rel="stylesheet" />
+    
+    
+    <link rel="stylesheet" href="/css/home/index.css?v=pbt_YGhKSEEzhFKQWuQPDDprJ9PPdsKJ6KzHGIFqj3E" />
+
+    <style>
+        .yellow-button {
+            background-color: #ffdc19;
+            font-weight: bold;
+            width: 90%;
+            margin-bottom: 1em;
+        }
+
+        .find-out-why {
+            color: white;
+            background-image: url('/img/chff-lander-back-1.png');
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 2em 0 3em;
+        }
+
+        .every-week-you-get {
+            padding: 0 0 1em;
+        }
+
+        @media(min-width:1200px) {
+            .every-week-you-get {
+                background-image: url('/img/chff-lander-back-2.png');
+                background-position: top right;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .feature > h4 {
+            margin-bottom: 0.2em;
+        }
+
+        .powerful-stats {
+            background-color: #0e1b32;
+            color: white;
+            padding: 1em 0 1.5em;
+        }
+
+            .powerful-stats p:last-child {
+                padding: 1em 0;
+            }
+
+        .experts-say {
+            padding: 1em 0 3em;
+        }
+
+        .nfl-quote {
+            background-color: #0e1b32;
+            color: white;
+            padding: 1em 1em 1.5em;
+            border: 1em solid white;
+        }
+
+        .game-capsules {
+            color: white;
+            background-color: #0e1b32;
+            background-size: cover;
+            padding: 1em;
+        }
+    </style>
+
+    <style>
+        .winner {
+            background-color: forestgreen;
+            color: white;
+        }
+    </style>
+
+    <style>
+        .video_wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+
+    <script src="/js/bundle.min.js?v=roXpBcf420sEEEi7yqsRTd4LcysGa2Q62SoT8rlkyuY"></script>
+    <script>
+        var viewBag = {
+            title: 'Home',
+            toast: [],
+        };
+    </script>
+    
+    
+        <script src="/js/site.min.js?v=bhKeRRbGVnx-sxyA-rZf8YWzEh6VU8H0t3cimqS6_6k"></script>
+    
+    
+    <script>
+        $(document).ready(function () {
+            highlightRankWinner();
+        });
+
+        function highlightRankWinner() {
+            $('tbody > tr', '.game-analysis').each(function (ix, element) {
+                var $compares = $('.rank-compare', $(element));
+
+                var winner = $compares.sort(function (a, b) { return a.innerText - b.innerText; })[0];
+
+                $(winner).addClass('winner');
+            });
+        }
+    </script>
+
+
+</head>
+<body>
+
+
+    
+
+
+<nav id="header-nav" class="navbar navbar-inverse">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-left" href="/">
+                <div class="home-link">
+                        <img src="/img/chff-logo.png" class="brand-logo img-responsive" />
+                </div>
+            </a>
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse">
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                        <li>
+                            <a class="btn btn-default" href="/account/signup">
+                                <i class="fa fa-user-plus"></i> Signup
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-default" href="/account/login">
+                                <i class="fa fa-sign-in"></i> Login
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+
+<nav class="navbar navbar-inverse text-uppercase">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#categories-bar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div id="categories-bar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/home/news">CHFF Articles</a>
+                    </li>
+                    <li>
+                        <a href="/home/gameofweek">CHFF Game of the Week</a>
+                    </li>
+                    <li>
+                        <a href="/home/premium">Premium</a>
+                    </li>
+
+
+
+                <li>
+                    <a href="https://www.vegasinsider.com/" target="_blank">Odds</a>
+                </li>
+
+                
+
+    <link rel="stylesheet" href="/css/components/search-menu.min.css?v=vhIQFH7Hg2Js_4IrKLNlxy95SO9_PtAUo_MqmQwDnn0" />
+
+
+
+
+    <script src="/js/components/search-menu.min.js?v=PYAuxOzYAmpEqCfEsGiH_P1mjQKCOQUbw_v1xj1wZrU"></script>
+
+
+<li>
+    <input type="text" class="form-control search-menu-input" />
+
+    <a class="search-menu-button" href="/search">
+        <i class="fa fa-search"></i>
+    </a>
+</li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+    <div class="container">
+        
+
+
+
+<section class="row find-out-why">
+    <div class="col-lg-offset-2 col-lg-8 text-center">
+        <h1>Find out why our Proprietary Quality Stats have produced an incredible record of success analyzing NFL teams and games for fans who bet on NFL football.</h1>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <a class="btn btn-default yellow-button" href="/account/signup">
+                    <div style="font-size: 1.2em;">START YOUR FREE TRIAL</div>
+                </a>
+            </div>
+        </div>
+</section>
+
+<section class="experts-say text-center">
+    <h2>What NFL Experts are Saying</h2>
+
+    <div class="row">
+        <div class="col-md-4 nfl-quote">
+            <p><i class="fa fa-2x fa-quote-left"></i></p>
+            <p><em>Your site and your people do a great job</em></p>
+            <p>- Adam Schefter, <strong>ESPN</strong></p>
+        </div>
+
+        <div class="col-md-4 nfl-quote">
+            <p><i class="fa fa-2x fa-quote-left"></i></p>
+            <p><em>Guys like (CHFF publisher Kerry J. Byrne) are smart about football and they think about football.</em></p>
+            <p>- Peter King, <strong>NBC Sports</strong></p>
+        </div>
+
+        <div class="col-md-4 nfl-quote">
+            <p><i class="fa fa-2x fa-quote-left"></i></p>
+            <p><em>Cutting-edge analysis</em></p>
+            <p>- Allen Barra, <strong>The Wall Street Journal</strong></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 nfl-quote">
+            <p><i class="fa fa-2x fa-quote-left"></i></p>
+            <p><em>The Cold, Hard Football Facts is an addiction</em></p>
+            <p>- Gary V., <strong>WRNO, New Orleans</strong></p>
+        </div>
+
+        <div class="col-md-4 nfl-quote">
+            <p><i class="fa fa-2x fa-quote-left"></i></p>
+            <p><em>A must-read website for pigskin folk</em></p>
+            <p>- Bob Ryan, <strong>The Boston Globe</strong></p>
+        </div>
+
+        <div class="col-md-4 nfl-quote">
+            <p><i class="fa fa-2x fa-quote-left"></i></p>
+            <p><em>We get a lot of ideas from you guys,</em></p>
+            <p>- the late Steve Sabol, <strong>NFL Films</strong></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 nfl-quote">
+            <p><i class="fa fa-2x fa-quote-left"></i></p>
+            <p><em>Brilliant sports journalism</em></p>
+            <p>- Ben Maller, <strong>Fox Sports Radio Network</strong></p>
+        </div>
+
+        <div class="col-md-4 nfl-quote">
+            <p><i class="fa fa-2x fa-quote-left"></i></p>
+            <p><em>A potty-mouthed new media trailblazer</em></p>
+            <p>- David Scott, <strong>Boston Sports Review</strong></p>
+        </div>
+
+        <div class="col-md-4 nfl-quote">
+            <p><i class="fa fa-2x fa-quote-left"></i></p>
+            <p><em>Stout-hearted geniuses</em></p>
+            <p>- Dan Shanoff, formerly of <strong>"Daily Quickie"</strong> fame and <strong>DanShanoff.com</strong></p>
+        </div>
+    </div>
+
+</section>
+
+<div class="row">
+    <section class="col-lg-12 text-center">
+        <a class="btn btn-default yellow-button" href="/account/signup">
+            <div style="font-size: 1.2em;">START YOUR FREE TRIAL</div>
+        </a>
+    </section>
+</div>
+
+<!--<div class="row" style="text-align:center;">
+    <section id="video" class="col-lg-12">-->
+
+        <!--<div class="video_wrapper">
+            <iframe frameborder="0" width="100%" height="100%" src="https://www.youtube.com/embed/wXB21JMP8Is" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+</div>-->
+
+
+<section class="row every-week-you-get">
+    <div class="col-sm-10 col-md-8 col-lg-7">
+        <h2>Powerful Stats</h2>
+
+        <div>
+            The Cold Hard Football Facts are built upon the bedrock of our Quality Stats, those indicators that have direct correlation to winning football games.
+        </div>
+
+        <h4>With Your Subscription You Get:</h4>
+    </div>
+
+    <div class="col-sm-12 col-lg-8">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="feature">
+                    <h4>Quality Stats</h4>
+                    <p>Our simple to use, ground-breaking Quality Stats power the winning game coverage at CHFF, which has produced an incredible record of success analyzing teams and games for football fans.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>Game Capsules for Every Game</h4>
+                    <p>Analysis and Quality Stat comparison for every match-up every game measured side by side based on Quality Stats. </p>
+                </div>
+
+                <div class="feature">
+                    <h4>Team Profiles</h4>
+                    <p>The statistical profile of each team in easy to use, info-packed team page.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>Weekly and Season-Long Stat Leaderboards</h4>
+                    <p>Top performers each week and all season in each of our proprietary Quality Stats, showing in graphic terms the importance of each indicator.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>Team Needs</h4>
+                    <p>Detailed analysis recapping the performance for all 32 teams and outlining what each needs the next season.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="feature">
+                    <h4>Free Agency</h4>
+                    <p>A breakdown by position of the top available free agents heading into the 2020 Season and the Cold Hard Football Facts Free Agency Tracker.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>Draft</h4>
+                    <p>Comprehensive NFL Draft Coverage including composite rankings for each position from the major NFL Draft analysis.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>Combine</h4>
+                    <p>Performance recap and analysis of who boosted or hurt their Draft stock.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>News</h4>
+                    <p>All the latest rumors and headlines from around the league with a twist thanks to our Quality Stats.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>Prop Wagers</h4>
+                    <p>Breaking down the most popular and best prop wagers with an eye on systemic connections to our Quality Stats.</p>
+                </div>
+
+                <div class="feature">
+                    <h4>Future Odds</h4>
+                    <p>Analyzing all the odds on future performance, draft selections and other league news with an eye on our Quality Stats.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<section id="game-analysis" class="row game-capsules">
+    <h2>Game Capsules</h2>
+
+    <p>The CHFF Game Capsules and color coded side-by-side team charts highlight statistical advantages and provide an overall summary of how the CHFF Quality Stats stack up every game of the NFL season.</p>
+    <p>&nbsp;</p>
+    <p class="text-center">
+        <a href="/home/gameofweek">CHFF Game of the Week</a>
+    </p>
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-8">
+            <div class="row">
+                <div class="col-sm-12">
+                    <a class="btn btn-default yellow-button" href="/account/signup">
+                        <div style="font-size: 1.2em;">START YOUR FREE TRIAL</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<a id="quotes"></a>
+
+    </div>
+
+    <footer class="container">
+
+        <div class="row">
+            <div class="col-lg-8">
+                <span class="small">
+                    &copy; 2022 CHFF Stats, LLC. All rights reserved. 
+                    <a href="/policy">Privacy Policy</a>
+                    and
+                    <a href="/terms">Terms of Service</a>
+                </span>
+            </div>
+            <div class="col-lg-4 text-right">
+                <a href="mailto:info@coldhardfootballfacts.com">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1018616-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-1018616-1');
+</script>
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2201013331443283",
+        enable_page_level_ads: true
+    });
+</script>
+
+</body>
+
+</html>
