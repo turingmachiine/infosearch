@@ -12,6 +12,8 @@ from nltk.stem import WordNetLemmatizer
 LANGUAGE = 'english'
 STOP_WORDS = stopwords.words(LANGUAGE)
 INPUT_LINE = 'patrick mahomes'
+CWD = '/'.join([path for path in os.getcwd().split('/') if os.getcwd().split('/').index(path)
+                <= os.getcwd().split('/').index('infosearch')])
 
 
 def compare_vectors(sample, search):
@@ -29,7 +31,7 @@ def compare_vectors(sample, search):
 
 def get_vector_from_file(name):
     vector_dict = {}
-    file = open("../task_four/output/{}".format(name))
+    file = open('{}/task_four/output/{}'.format(CWD, name))
     vecotor_strings = file.read().split("\n")
     file.close()
     for vecotor_string in vecotor_strings:
@@ -40,8 +42,9 @@ def get_vector_from_file(name):
 
 def get_all_tokens():
     tokens = set()
-    for filename in filter(lambda x: '_tokens.txt' in x, os.listdir('../task_two/output')):
-        with open('../task_two/output/{}'.format(filename), 'r') as file:
+
+    for filename in filter(lambda x: '_tokens.txt' in x, os.listdir('{}/task_two/output'.format(CWD))):
+        with open('{}/task_two/output/{}'.format(CWD, filename), 'r') as file:
             for line in file:
                 tokens.add(line[:-1])
     return tokens
@@ -70,11 +73,11 @@ def make_vector(sentence):
 
 def search(request):
     search_vector = make_vector(request)
-
+    print(CWD)
     result_dict = {}
-    vectors_files = filter(lambda x: '_lemma.txt' in x, os.listdir("../task_four/output/"))
+    vectors_files = filter(lambda x: '_lemma.txt' in x, os.listdir('{}/task_four/output/'.format(CWD)))
     for name in vectors_files:
-        result_dict[name] = compare_vectors(get_vector_from_file(name), search_vector)
+        result_dict[name.replace('_lemma.txt', '.html')] = compare_vectors(get_vector_from_file(name), search_vector)
     return dict(sorted(result_dict.items(), key=lambda x: x[1], reverse=True))
 
 
